@@ -21,7 +21,7 @@
 		include 'koneksi.php'; //untuk menyisipkan script file php lain ke dlm file ini.
         $no = 1;
         $data = mysqli_query($koneksi,"select * from mahasiswa");
-		while($d = mysqli_fetch_array($data)){   //mengambil function array (indexing tapi by nama field, bukan angka)
+		while($d = mysqli_fetch_assoc($data)){   //mengambil function assoc (indexing tapi by nama field, bukan angka) 
             ?>
 			<tr>
 				<td><?php echo $no++; ?></td>
